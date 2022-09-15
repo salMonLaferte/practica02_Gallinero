@@ -13,7 +13,7 @@ public class HamburguesaAtun extends Hamburguesa{
     }
 
     @Override
-    public void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Wosh wosh el atun frito esta bien cocido");
     }
     

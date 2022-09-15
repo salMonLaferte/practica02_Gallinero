@@ -14,7 +14,7 @@ public class HamburguesaZorza extends Hamburguesa{
     }
 
     @Override
-    public void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Wosh wosh la carne de lomo esta bien adobada y deliciosa");
     }
     

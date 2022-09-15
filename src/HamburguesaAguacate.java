@@ -13,7 +13,7 @@ public class HamburguesaAguacate extends Hamburguesa{
     }
 
     @Override
-    public void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Wosh wosh la carne esta bien cocida y jugosa");
     }
     

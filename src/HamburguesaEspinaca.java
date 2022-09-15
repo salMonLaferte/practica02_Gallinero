@@ -14,7 +14,7 @@ public class HamburguesaEspinaca extends Hamburguesa{
     }
 
     @Override
-    public void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Wosh wosh el pollo esta bien cocido y muy delicioso.");
     }
     
