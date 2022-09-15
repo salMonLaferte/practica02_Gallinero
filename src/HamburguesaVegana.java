@@ -13,7 +13,7 @@ public class HamburguesaVegana extends Hamburguesa{
     }
 
     @Override
-    public void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Wosh wosh no hay carne pero algo tenemos que cocer asi que \n, espinacas bien fritas y deliciosas");
     }
     

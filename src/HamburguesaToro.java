@@ -14,7 +14,7 @@ public class HamburguesaToro extends Hamburguesa{
     }
 
     @Override
-    public void prepararCarne() {
+    protected void prepararCarne() {
         System.out.println("Wosh wosh la carne de rabo de toro esta bien cocida y tierna.");
     }
     
