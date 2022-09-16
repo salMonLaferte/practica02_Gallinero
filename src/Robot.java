@@ -30,6 +30,7 @@ public class Robot {
     }
 
     public void imprimirMenu(MenuCompleto menu){
+        //xd
         System.out.println("menuxd");
     }
 
@@ -58,9 +59,6 @@ public class Robot {
         estadoActual.entregarComida();
     }
 
-    public void caminar() {
-        estadoActual.caminar();
-    }
 
     public Estado getSuspendido() {
         return suspendidoEstado;
