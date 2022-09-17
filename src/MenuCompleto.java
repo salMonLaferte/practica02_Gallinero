@@ -11,10 +11,22 @@ public class MenuCompleto {
     private MenuGeneral menuGeneral;
 
     /**
+     * Crea un menu completo con los submenus diario y especial predeterminados, o 
+     * con dichos menus vacios, segun se especifique.
+     * @param crearloVacio Si es true los submenus diario y especial estaran vacios para agregar
+     * platillos despues, si es false se crearan los submenus predeterminados.
+     */
+    public MenuCompleto(boolean crearloVacio){
+        menuDiario = new MenuDiario(crearloVacio);
+        menuEspecial = new MenuEspecial(crearloVacio);
+        menuGeneral = new MenuGeneral();
+    }
+
+    /**
      * Regresa un iterador sobre el menu diario.
      * @return un iterador para recorrer el menu diario.
      */
-    public Iterator<Platillo> obtenerMenuDiario(){
+    public Iterator<Platillo> obtenerIteradorMenuDiario(){
         return menuDiario.obtenerIterador();
     }
 
@@ -30,7 +42,7 @@ public class MenuCompleto {
      * Regresa un iterador sobre el menu general.
      * @return un iterador para recorrer el menu general.
      */
-    public Iterator<Platillo> obtenerMenuGeneral(){
+    public Iterator<Platillo> obtenerIteradorMenuGeneral(){
         return menuGeneral.obtenerIterador();
     }
 
