@@ -47,4 +47,9 @@ public class SuspendidoEstado implements Estado {
         
     }
 
+    @Override
+    public String obtenerNombreDelEstado() {
+        return "Suspendido";
+    }
+
 }

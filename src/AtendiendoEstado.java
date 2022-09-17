@@ -17,7 +17,7 @@ public class AtendiendoEstado implements Estado {
 
     @Override
     public void leerMenu(MenuCompleto menu) {
-        robot.imprimirMenu(menu);
+        robot.imprimirMenuCompleto(menu);
     }
 
     
@@ -48,6 +48,11 @@ public class AtendiendoEstado implements Estado {
     public void caminar() {
         System.out.println("No necesito caminar, ya que estoy atendiendote");
         
+    }
+
+    @Override
+    public String obtenerNombreDelEstado() {
+        return "Atendiendo";
     }
 
 

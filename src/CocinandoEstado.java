@@ -43,4 +43,9 @@ public class CocinandoEstado implements Estado {
         System.out.println("No puedo caminar a donde estas, ya que estoy cocinando");
     }
 
+    @Override
+    public String obtenerNombreDelEstado() {
+        return "Cocinando";
+    }
+
 }

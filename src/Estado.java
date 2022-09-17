@@ -15,4 +15,5 @@ public interface Estado {
 
     public void caminar();
 
+    public String obtenerNombreDelEstado();
 }

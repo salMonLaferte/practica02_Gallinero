@@ -48,4 +48,9 @@ public class CaminandoEstado implements Estado {
         
     }
 
+    @Override
+    public String obtenerNombreDelEstado() {
+        return "Caminando";
+    }
+
 }
