@@ -2,8 +2,13 @@ package src;
 
 import java.util.Iterator;
 
+/**
+ * Clase en la que esta implementado el robot
+ */
+
 public class Robot {
 
+    // Creamos los 4 estados del robot
     private Estado suspendidoEstado;
     private Estado cocinandoEstado;
     private Estado caminandoEstado;
@@ -11,6 +16,9 @@ public class Robot {
 
     private Estado estadoActual;
 
+    /**
+     * Constructor
+     */
     public Robot() {
         suspendidoEstado = new SuspendidoEstado();
         cocinandoEstado = new CocinandoEstado();
@@ -19,46 +27,88 @@ public class Robot {
 
     }
 
+    /**
+     * Te da la respuesta a la accion suspender, dependiendo de el estado actual del robot
+     */
     public void suspender() {
         estadoActual.suspender();
     }
 
+    /**
+     * Te da la respuesta a la accion activar, dependiendo de el estado actual del robot
+     */    
     public void activar() {
         estadoActual.activar();
     }
 
+    /**
+     * Te da la respuesta a la accion leer menu, dependiendo de el estado actual del robot
+     * @param un menu completo
+     */
     public void leerMenu(MenuCompleto menu) {
         estadoActual.leerMenu(menu);
     }
 
+    /**
+     * Te da la respuesta a la accion cocinar, dependiendo de el estado actual del robot
+     * @param un menu completo
+     * @param el int del id del platillo
+     */
     public void cocinar(MenuCompleto menu, int id) {
         estadoActual.cocinar(menu, id);
     }
 
+    /**
+     * Te da la respuesta a la accion entrgar comida, dependiendo de el estado actual del robot
+     */
     public void entregarComida() {
         estadoActual.entregarComida();
     }
 
+    /**
+     * Getter de suspendido
+     * @return el estado de suspendido
+     */
     public Estado getSuspendido() {
         return suspendidoEstado;
     }
 
+    /**
+     * Getter de Atendiendo
+     * @return el estado de atendiendo
+     */
     public Estado getAtendiendo() {
         return atendiendoEstado;
     }
 
+    /**
+     * Getter de Caminando
+     * @return el estado de caminando
+     */
     public Estado getCaminando() {
         return caminandoEstado;
     }
 
+    /**
+     * Getter de cocinando
+     * @return el estado de cocinando
+     */
     public Estado getCocinando() {
         return cocinandoEstado;
     }
 
+    /**
+     * Cambia los estados del robot
+     * @param estado
+     */
     public void setEstado(Estado estado) {
         estadoActual = estado;
     }
 
+    /**
+     * Getter del estado actual
+     * @return estado actual
+     */
     public Estado getEstado(){
         return estadoActual;
     }
