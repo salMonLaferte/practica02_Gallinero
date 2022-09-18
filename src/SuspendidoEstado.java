@@ -5,7 +5,15 @@ package src;
  */ 
 public class SuspendidoEstado implements Estado {
 
-    private Robot robot;
+    Robot robot;
+
+    /**
+     * Constructor que inicializa al robot
+     * @param robot
+     */
+    SuspendidoEstado(Robot robot){
+       this.robot=robot;
+    }
 
     /**
      * {@inheritDoc}
@@ -23,7 +31,6 @@ public class SuspendidoEstado implements Estado {
     public void activar() {
         System.out.println("ok, me activare");
         robot.setEstado(robot.getCaminando());
-
     }
 
     /**

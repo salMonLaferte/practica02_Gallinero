@@ -5,7 +5,15 @@ package src;
  */
 public class CocinandoEstado implements Estado {
 
-    private Robot robot;
+    Robot robot;
+
+    /**
+     * Constructor que inicializa al robot
+     * @param robot
+     */
+    CocinandoEstado(Robot robot){
+        this.robot=robot;
+    }
 
     /**
      * {@inheritDoc}

@@ -17,18 +17,20 @@ public class Robot {
     private Estado estadoActual;
 
     /**
-     * Constructor
+     * Constructor que inicializa los estados y pone al robot en suspendido
      */
     public Robot() {
-        suspendidoEstado = new SuspendidoEstado();
-        cocinandoEstado = new CocinandoEstado();
-        caminandoEstado = new CaminandoEstado();
-        atendiendoEstado = new AtendiendoEstado();
 
+        suspendidoEstado = new SuspendidoEstado(this);
+        cocinandoEstado = new CocinandoEstado(this);
+        caminandoEstado = new CaminandoEstado(this);
+        atendiendoEstado = new AtendiendoEstado(this);
+        this.setEstado(getSuspendido());
     }
 
     /**
      * Te da la respuesta a la accion suspender, dependiendo de el estado actual del robot
+     * @param robot
      */
     public void suspender() {
         estadoActual.suspender();
@@ -50,6 +52,15 @@ public class Robot {
     }
 
     /**
+     * Te da la respuesta a la accion tomar orden, dependiendo del estado actual del robot
+     * @param menu
+     * @param id
+     */
+    public void tomarOrden(MenuCompleto menu, int id){
+        estadoActual.tomarOrden(menu, id);
+    }
+
+    /**
      * Te da la respuesta a la accion cocinar, dependiendo de el estado actual del robot
      * @param un menu completo
      * @param el int del id del platillo
@@ -63,6 +74,13 @@ public class Robot {
      */
     public void entregarComida() {
         estadoActual.entregarComida();
+    }
+
+    /**
+     * Te da la respuesta a la accion caminar, dependiendo de el estado actual del robot
+     */
+    public void caminar(){
+        estadoActual.caminar();
     }
 
     /**

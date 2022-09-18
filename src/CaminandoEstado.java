@@ -4,8 +4,16 @@ package src;
  * Clase que implementa el estado de caminando
  */
 public class CaminandoEstado implements Estado {
+    Robot robot;
 
-    private Robot robot;
+    /**
+     * Constructor que inicializa al robot
+     * @param robot
+     */
+    CaminandoEstado(Robot robot){
+        this.robot=robot;
+    }
+
 
     /**
      * Metodo que suspende al robot

@@ -9,15 +9,14 @@ public class Main {
         Robot robot = new Robot();
         MenuCompleto menu = new MenuCompleto(false);
         int id = -1;
-        while(accion != 6){
+        while(accion != 8){
             Estado actual = robot.getEstado();
             System.out.println("Estado del robot: " + actual.obtenerNombreDelEstado());
             System.out.println("Introduzca una accion para el robot\n");
-            System.out.println("1.Suspender\n2.Activar\n3.Leer menu\n4.Cocinar\n5.EntregarComida");
+            System.out.println("1.Suspender\n2.Activar\n3.Leer menu\n4.Cocinar\n5.EntregarComida\n6.Decirle que te atienda\n7.Tomar tu orden");
             accion = scanner.nextInt();
-            if(accion == 4){
-                id = scanner.nextInt();
-            }
+            
+
             switch(accion){
                 case 1:
                     robot.suspender();
@@ -33,6 +32,17 @@ public class Main {
                     break;
                 case 5:
                     robot.entregarComida();
+                    break;
+                case 6:
+                    robot.caminar();
+                    break;
+                case 7:
+                    if(actual==robot.getAtendiendo()){
+                        System.out.println("Dime el ID de tu platillo");
+                        id = scanner.nextInt();
+                        robot.tomarOrden(menu, id);  
+                    }
+                    robot.tomarOrden(menu, id);
                     break;
             }
         }

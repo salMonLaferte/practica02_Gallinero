@@ -4,7 +4,11 @@ package src;
  */
 public class AtendiendoEstado implements Estado {
 
-    private Robot robot;
+    Robot robot;
+
+    AtendiendoEstado(Robot robot){
+        this.robot= robot;
+    }
 
     /**
      * {@inheritDoc}
@@ -40,7 +44,7 @@ public class AtendiendoEstado implements Estado {
     @Override
     public void tomarOrden(MenuCompleto menu, int id) {
         if(robot.validarOrden(menu, id)){
-            System.out.println("Ok, ahorita te lo preparo");
+            System.out.println("Ok, ahorita te lo preparo.\n Si quieres ver mi proceso de cocina presiona cocinar :-}");
             robot.setEstado(robot.getCocinando());
         }else{
             System.out.println("El ID no es valido");
