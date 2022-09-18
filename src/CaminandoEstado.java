@@ -14,7 +14,7 @@ public class CaminandoEstado implements Estado {
     }
 
     /**
-     * Metodo que suspende al robot
+     * Metodo que suspende al robot, lo cambia de estado
      */
     @Override
     public void suspender() {

@@ -76,7 +76,7 @@ public class AtendiendoEstado implements Estado {
      */
     @Override
     public void caminar() {
-        System.out.println("No necesito caminar, ya que estoy atendiendote");
+        System.out.println("Ya llegue a atenderte, no me tengo que acercar mas");
 
     }
 

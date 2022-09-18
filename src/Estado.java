@@ -21,11 +21,15 @@ public interface Estado {
 
     /**
      * Dice si el robot puede tomar tu orden o no dependiendo de su estado
+     * @param un menu completo
+     * @param un int con el id del platillo
      */
     public void tomarOrden(MenuCompleto menu, int id);
 
     /**
      * Dice si el robot puede cocinar o no dependiendo de su estado
+     * @param un menu completo
+     * @param un int con el id del platillo
      */
     public void cocinar(MenuCompleto menu, int id);
 
