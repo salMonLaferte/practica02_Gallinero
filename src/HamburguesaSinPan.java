@@ -1,13 +1,12 @@
-package src;
 
 public class HamburguesaSinPan extends Hamburguesa {
 
-    public HamburguesaSinPan(){
+    public HamburguesaSinPan() {
         id = 5;
         nombre = "Hamburguesa de dieta sin Pan";
-        descripcion = "¿Quien ha dicho que las hamburguesas son bombas de calorias,\n"+
-         "+colesterol y trigliceridos? Unas hamburguesas de carne con poca grasa,\n" + 
-         "queso fresco y sin pan";
+        descripcion = "¿Quien ha dicho que las hamburguesas son bombas de calorias,\n" +
+                "+colesterol y trigliceridos? Unas hamburguesas de carne con poca grasa,\n" +
+                "queso fresco y sin pan";
         precio = 65;
         conQueso = true;
         esVegetariana = false;

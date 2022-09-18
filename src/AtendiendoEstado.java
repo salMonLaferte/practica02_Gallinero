@@ -1,4 +1,4 @@
-package src;
+
 /**
  * Clase que implementa el estado de atendiendo
  */
@@ -6,8 +6,8 @@ public class AtendiendoEstado implements Estado {
 
     Robot robot;
 
-    AtendiendoEstado(Robot robot){
-        this.robot= robot;
+    AtendiendoEstado(Robot robot) {
+        this.robot = robot;
     }
 
     /**
@@ -29,6 +29,7 @@ public class AtendiendoEstado implements Estado {
 
     /**
      * Metodo que le lee el menu al cliente
+     * 
      * @param un menu completo
      */
     @Override
@@ -38,18 +39,19 @@ public class AtendiendoEstado implements Estado {
 
     /**
      * Metodo que toma la orden del cliente y lo cambia al estado de cocinando
-     * @param un menu completo
+     * 
+     * @param un  menu completo
      * @param int con el id del platillo
      */
     @Override
     public void tomarOrden(MenuCompleto menu, int id) {
-        if(robot.validarOrden(menu, id)){
+        if (robot.validarOrden(menu, id)) {
             System.out.println("Ok, ahorita te lo preparo.\n Si quieres ver mi proceso de cocina presiona cocinar :-}");
             robot.setEstado(robot.getCocinando());
-        }else{
+        } else {
             System.out.println("El ID no es valido");
         }
-        
+
     }
 
     /**
@@ -75,7 +77,7 @@ public class AtendiendoEstado implements Estado {
     @Override
     public void caminar() {
         System.out.println("No necesito caminar, ya que estoy atendiendote");
-        
+
     }
 
     /**
@@ -85,6 +87,5 @@ public class AtendiendoEstado implements Estado {
     public String obtenerNombreDelEstado() {
         return "Atendiendo";
     }
-
 
 }

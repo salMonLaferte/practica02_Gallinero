@@ -1,5 +1,3 @@
-package src;
-
 /**
  * Clase que implementa el estado de caminando
  */
@@ -8,12 +6,12 @@ public class CaminandoEstado implements Estado {
 
     /**
      * Constructor que inicializa al robot
+     * 
      * @param robot
      */
-    CaminandoEstado(Robot robot){
-        this.robot=robot;
+    CaminandoEstado(Robot robot) {
+        this.robot = robot;
     }
-
 
     /**
      * Metodo que suspende al robot
@@ -64,7 +62,7 @@ public class CaminandoEstado implements Estado {
     @Override
     public void leerMenu(MenuCompleto menu) {
         System.out.println("Te leere el menu cuando te este atendiendo, ahora estoy caminando");
-        
+
     }
 
     /**
@@ -73,7 +71,7 @@ public class CaminandoEstado implements Estado {
     @Override
     public void tomarOrden(MenuCompleto menu, int id) {
         System.out.println("Estoy caminando, por lo que no puedo tomar tu orden");
-        
+
     }
 
     /**

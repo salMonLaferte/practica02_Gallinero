@@ -1,18 +1,18 @@
-package src;
 
 /**
  * Clase que implementa el estado de suspendido
- */ 
+ */
 public class SuspendidoEstado implements Estado {
 
     Robot robot;
 
     /**
      * Constructor que inicializa al robot
+     * 
      * @param robot
      */
-    SuspendidoEstado(Robot robot){
-       this.robot=robot;
+    SuspendidoEstado(Robot robot) {
+        this.robot = robot;
     }
 
     /**
@@ -66,7 +66,7 @@ public class SuspendidoEstado implements Estado {
     @Override
     public void tomarOrden(MenuCompleto menu, int id) {
         System.out.println("No puedo tomar tu orden porque estoy suspendido");
-        
+
     }
 
     /**
@@ -75,7 +75,7 @@ public class SuspendidoEstado implements Estado {
     @Override
     public void caminar() {
         System.out.println("No puedo caminar ahora, ya que estoy suspendido");
-        
+
     }
 
     /**

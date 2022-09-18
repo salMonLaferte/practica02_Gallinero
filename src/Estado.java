@@ -1,4 +1,3 @@
-package src;
 
 /**
  * Interface que nos da las acciones de los estados
@@ -42,6 +41,7 @@ public interface Estado {
 
     /**
      * Da un string con el estado del robot
+     * 
      * @return estado del robot en string
      */
     public String obtenerNombreDelEstado();

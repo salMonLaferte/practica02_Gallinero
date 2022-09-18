@@ -1,4 +1,3 @@
-package src;
 
 /**
  * Clase que implementa el estado de cocinando
@@ -9,10 +8,11 @@ public class CocinandoEstado implements Estado {
 
     /**
      * Constructor que inicializa al robot
+     * 
      * @param robot
      */
-    CocinandoEstado(Robot robot){
-        this.robot=robot;
+    CocinandoEstado(Robot robot) {
+        this.robot = robot;
     }
 
     /**
@@ -43,7 +43,8 @@ public class CocinandoEstado implements Estado {
 
     /**
      * Metodo que hace que el robot cocine
-     * @param un menu completo
+     * 
+     * @param un  menu completo
      * @param int del id
      */
     @Override
@@ -66,7 +67,7 @@ public class CocinandoEstado implements Estado {
      */
     @Override
     public void tomarOrden(MenuCompleto menu, int id) {
-        System.out.println("Ya tome tu orden :-}");        
+        System.out.println("Ya tome tu orden :-}");
     }
 
     /**
