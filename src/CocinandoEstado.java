@@ -54,7 +54,7 @@ public class CocinandoEstado implements Estado {
     }
 
     /**
-     * Metodo que suspende al robot despues de entregar la comida
+     * Metodo que suspende al robot despues de entregar la comida.
      */
     @Override
     public void entregarComida() {

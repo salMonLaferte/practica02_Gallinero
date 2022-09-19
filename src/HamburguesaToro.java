@@ -1,6 +1,6 @@
 
 public class HamburguesaToro extends Hamburguesa {
-
+    
     public HamburguesaToro() {
         id = 6;
         nombre = "Hamburguesa de rabo de Toro";

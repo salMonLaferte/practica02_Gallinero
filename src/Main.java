@@ -4,6 +4,10 @@
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * Metodo que ejecuta toda la practica.
+     * @param args Array de argumentos.
+     */
     public static void main(String[] args){
         int accion = 0;
         Scanner scanner = new Scanner(System.in);

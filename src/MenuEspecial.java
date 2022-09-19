@@ -10,7 +10,7 @@ public class MenuEspecial {
     private Hashtable<Integer, Platillo> platillos;
 
     /**
-     * Genera el menu especial predeterminado que contiene las hamburguesas: Zorsa,
+     * Genera el menu especial predeterminado que contiene las hamburguesas: Zorza,
      * Toro y Pescado.
      * @param crearloVacio Si es true, el menu generado estara vacio; si es false el menu generado sera
      * el predeterminado.

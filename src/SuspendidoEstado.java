@@ -3,13 +3,14 @@
  * Clase que implementa el estado de suspendido
  */
 public class SuspendidoEstado implements Estado {
-
+    /**
+     * Robot que sera el sujeto de nuestro Estado
+     */
     Robot robot;
 
     /**
-     * Constructor que inicializa al robot
-     * 
-     * @param robot
+     * Constructor de la clase SuspendidoEstado que inicializa al robot
+     * @param robot que realiza la acción
      */
     SuspendidoEstado(Robot robot) {
         this.robot = robot;

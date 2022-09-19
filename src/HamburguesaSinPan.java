@@ -1,6 +1,9 @@
 
 public class HamburguesaSinPan extends Hamburguesa {
-
+     /**
+     * Metodo constructor de la clase HamburguesaSinPan
+     * (proporciona la descripcion especifica de está hamburguesa).
+     */
     public HamburguesaSinPan() {
         id = 5;
         nombre = "Hamburguesa de dieta sin Pan";
@@ -11,7 +14,10 @@ public class HamburguesaSinPan extends Hamburguesa {
         conQueso = true;
         esVegetariana = false;
     }
-
+    /**
+     * Metodo que permite el cambio de como preparar la carne
+     * de cada hamburguesa.
+     */
     @Override
     protected void prepararCarne() {
         System.out.println("Wosh wosh la carne esta bien cocida y jugosa");

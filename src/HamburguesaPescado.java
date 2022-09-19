@@ -1,6 +1,9 @@
 
 public class HamburguesaPescado extends Hamburguesa {
-
+    /**
+     * Metodo constructor de la clase HamburguesaPescado
+     * (proporciona la descripcion especifica de está hamburguesa).
+     */
     public HamburguesaPescado() {
         id = 4;
         nombre = "Hamburguesa de Pescado estilo Tailandes";
@@ -11,7 +14,10 @@ public class HamburguesaPescado extends Hamburguesa {
         conQueso = false;
         esVegetariana = false;
     }
-
+    /**
+     * Metodo que permite el cambio de como preparar la carne
+     * de cada hamburguesa.
+     */
     @Override
     protected void prepararCarne() {
         System.out.println("Wosh wosh la carne esta bien cocida y jugosa(estilo tailandes).");

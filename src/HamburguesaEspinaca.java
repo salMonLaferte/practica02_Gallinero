@@ -1,6 +1,9 @@
 
 public class HamburguesaEspinaca extends Hamburguesa {
-
+    /**
+     * Metodo constructor de la clase HamburguesaEspinaca
+     * (proporciona la descripcion especifica de está hamburguesa).
+     */
     public HamburguesaEspinaca() {
         id = 8;
         nombre = "Hamburguesas ligeras de pollo y espinacas";
@@ -11,7 +14,10 @@ public class HamburguesaEspinaca extends Hamburguesa {
         conQueso = true;
         esVegetariana = false;
     }
-
+    /**
+     * Metodo que permite el cambio de como preparar la carne
+     * de cada hamburguesa.
+     */
     @Override
     protected void prepararCarne() {
         System.out.println("Wosh wosh el pollo esta bien cocido y muy delicioso.");

@@ -1,6 +1,9 @@
 
 public class HamburguesaVegana extends Hamburguesa {
-
+    /**
+     * Metodo constructor de la clase HamburguesaVegana
+     * (proporciona la descripcion especifica de está hamburguesa).
+     */
     public HamburguesaVegana() {
         id = 7;
         nombre = "Hamburguesa Vegana de bulgur y espinacas";
@@ -10,7 +13,10 @@ public class HamburguesaVegana extends Hamburguesa {
         conQueso = false;
         esVegetariana = false;
     }
-
+    /**
+     * Metodo que permite el cambio de como preparar la carne
+     * de cada hamburguesa.
+     */
     @Override
     protected void prepararCarne() {
         System.out.println(

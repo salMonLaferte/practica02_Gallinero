@@ -1,6 +1,9 @@
 
 public class HamburguesaPavo extends Hamburguesa {
-
+    /**
+     * Metodo constructor de la clase HamburguesaAguacate
+     * (proporciona la descripcion especifica de está hamburguesa).
+     */
     public HamburguesaPavo() {
         id = 3;
         nombre = "Hamburguesa de Pavo";
@@ -11,7 +14,10 @@ public class HamburguesaPavo extends Hamburguesa {
         conQueso = true;
         esVegetariana = false;
     }
-
+    /**
+     * Metodo que permite el cambio de como preparar la carne
+     * de cada hamburguesa.
+     */
     @Override
     protected void prepararCarne() {
         System.out.println("Wosh wosh la carne de pavo esta bien cocida y jugosa.");

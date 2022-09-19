@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 public class Robot {
 
-    // Creamos los 4 estados del robot
+    /** Creamos los 4 estados del robot */
     private Estado suspendidoEstado;
     private Estado cocinandoEstado;
     private Estado caminandoEstado;
@@ -16,7 +16,7 @@ public class Robot {
     private Estado estadoActual;
 
     /**
-     * Constructor que inicializa los estados y pone al robot en suspendido
+     * Constructor que inicializa los estados y pone al robot en suspendido.
      */
     public Robot() {
 
@@ -28,74 +28,68 @@ public class Robot {
     }
 
     /**
-     * Te da la respuesta a la accion suspender, dependiendo de el estado actual del
-     * robot
-     * 
-     * @param robot
+     * Te da la respuesta a la accion suspender, dependiendo de 
+     * el estado actual del robot.
      */
     public void suspender() {
         estadoActual.suspender();
     }
 
     /**
-     * Te da la respuesta a la accion activar, dependiendo de el estado actual del
-     * robot
+     * Te da la respuesta a la accion activar, dependiendo de 
+     * el estado actual del robot.
      */
     public void activar() {
         estadoActual.activar();
     }
 
     /**
-     * Te da la respuesta a la accion leer menu, dependiendo de el estado actual del
-     * robot
-     * 
-     * @param un menu completo
+     * Te da la respuesta a la accion leer menu, dependiendo de
+     * el estado actual del robot.
+     * @param menu el menu completo
      */
     public void leerMenu(MenuCompleto menu) {
         estadoActual.leerMenu(menu);
     }
 
     /**
-     * Te da la respuesta a la accion tomar orden, dependiendo del estado actual del
-     * robot
-     * 
-     * @param menu
-     * @param id
+     * Te da la respuesta a la accion tomar orden, dependiendo del
+     * estado actual del robot.
+     * @param menu el menu completo
+     * @param id el int del id del platillo 
      */
     public void tomarOrden(MenuCompleto menu, int id) {
         estadoActual.tomarOrden(menu, id);
     }
 
     /**
-     * Te da la respuesta a la accion cocinar, dependiendo de el estado actual del
-     * robot
-     * 
-     * @param un menu completo
-     * @param el int del id del platillo
+     * Te da la respuesta a la accion cocinar, dependiendo de
+     * el estado actual del robot.
+     * @param menu el menu completo
+     * @param id el int del id del platillo
      */
     public void cocinar(MenuCompleto menu, int id) {
         estadoActual.cocinar(menu, id);
     }
 
     /**
-     * Te da la respuesta a la accion entrgar comida, dependiendo de el estado
-     * actual del robot
+     * Te da la respuesta a la accion entregar comida, dependiendo de el estado
+     * actual del robot.
      */
     public void entregarComida() {
         estadoActual.entregarComida();
     }
 
     /**
-     * Te da la respuesta a la accion caminar, dependiendo de el estado actual del
-     * robot
+     * Te da la respuesta a la accion caminar, dependiendo del estado actual del
+     * robot.
      */
     public void caminar() {
         estadoActual.caminar();
     }
 
     /**
-     * Getter de suspendido
-     * 
+     * Getter de suspendido.
      * @return el estado de suspendido
      */
     public Estado getSuspendido() {
@@ -103,8 +97,7 @@ public class Robot {
     }
 
     /**
-     * Getter de Atendiendo
-     * 
+     * Getter de Atendiendo.
      * @return el estado de atendiendo
      */
     public Estado getAtendiendo() {
@@ -113,7 +106,6 @@ public class Robot {
 
     /**
      * Getter de Caminando
-     * 
      * @return el estado de caminando
      */
     public Estado getCaminando() {
@@ -122,7 +114,6 @@ public class Robot {
 
     /**
      * Getter de cocinando
-     * 
      * @return el estado de cocinando
      */
     public Estado getCocinando() {
@@ -131,17 +122,15 @@ public class Robot {
 
     /**
      * Cambia los estados del robot
-     * 
-     * @param estado
+     * @param estado el estado al cual se va a cambiar.
      */
     public void setEstado(Estado estado) {
         estadoActual = estado;
     }
 
     /**
-     * Getter del estado actual
-     * 
-     * @return estado actual
+     * Getter del estado actual.
+     * @return estado actual.
      */
     public Estado getEstado() {
         return estadoActual;
@@ -150,7 +139,6 @@ public class Robot {
     /**
      * Imprime en la consola los tres submenus, en el orden: general, diario y
      * especial.
-     * 
      * @param menu Menu el cual contiene las instancias de cada submenu a imprimir.
      */
     public void imprimirMenuCompleto(MenuCompleto menu) {
@@ -172,7 +160,6 @@ public class Robot {
      * Recorre e imprime cada elemento de la coleccion de platillos desde la
      * posicion actual
      * a la cual apunta el iterador hasta el final de la coleccion.
-     * 
      * @param iterador Iterador que recorre la coleccion desde su posicion actual
      *                 hasta el final.
      */
@@ -188,7 +175,6 @@ public class Robot {
      * especial dentro
      * de la instancia del menu completo para determinar si exsite un platillo con
      * ese id.
-     * 
      * @param menu Instancia del menu completo donde se buscara el platillo con
      *             determinado id.
      * @param id   Identificador del platillo que se busca saber si está en el menu
@@ -212,9 +198,7 @@ public class Robot {
 
     /**
      * Busca un platillo con el id especificado desde la posicion actual del
-     * iterador hasta
-     * el final de la coleccion de platillos.
-     * 
+     * iterador hasta el final de la coleccion de platillos.
      * @param iterador Iterador que recorre la coleccion de platillos desde la
      *                 posicion actual hasta el final.
      * @param id       Identificador del platillo que se busca.
@@ -236,8 +220,7 @@ public class Robot {
      * Busca y prepara el primer platillo encontrado en el menu con el id
      * especificado.
      * La busqueda se realiza en el orden: menu general, menu diario y menu
-     * especial.
-     * 
+     * especial. 
      * @param menu Instancia de Menu completo que contiene los submenus: general,
      *             diario y especial.
      * @param id   Identificador del platillo que se quiere preparar.
@@ -257,7 +240,6 @@ public class Robot {
      * Recorre la coleccion de platillos desde la posicion actual del iterador hasta
      * el final de
      * la coleccion y cocina el primer platillo cuya id sea la especificada.
-     * 
      * @param iterador Iterador que recorre desde la posicion actual hasta el final
      *                 de la coleccion.
      * @param id       El identificador del platillo que se quiere preparar.

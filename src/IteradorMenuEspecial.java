@@ -23,12 +23,16 @@ public class IteradorMenuEspecial implements Iterator<Platillo> {
         iterator = llaves.iterator();
         this.tabla = tabla;
     }
-
+    /**
+     * Metodo que nos dice si hay un elemento siguiente.
+     */
     @Override
     public boolean hasNext() {
         return iterator.hasNext();
     }
-
+    /**
+     * Metodo que mueve el iterador al siguiente elemento.
+     */
     @Override
     public Platillo next() {
         return tabla.get(iterator.next());

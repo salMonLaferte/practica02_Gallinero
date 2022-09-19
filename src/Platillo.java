@@ -6,8 +6,11 @@
 public abstract class Platillo {
     /** Identificador del platillo */
     protected int id;
+    /** Nombre del platillo */
     protected String nombre;
+    /** Descripción del platillo */
     protected String descripcion;
+    /** Precio del platillo */
     protected int precio;
     /** Indicador de si el platillo lleva queso */
     protected boolean conQueso;
@@ -15,10 +18,12 @@ public abstract class Platillo {
     protected boolean esVegetariana;
 
     /**
-     * Prepara el platillo, imprime los pasos de su preparacion en la consola.
+     * Prepara el platillo, imprime los pasos de su preparación en la consola.
      */
     public abstract void preparaPlatillo();
-
+    /**
+     * Metodo que imprime la descripición de cada platillo.
+     */
     @Override
     public final String toString() {
         String informacion = "id: " + id + "\n";

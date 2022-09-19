@@ -17,12 +17,16 @@ public class IteradorMenuGeneral implements Iterator<Platillo> {
     public IteradorMenuGeneral(Platillo[] array) {
         this.array = array;
     }
-
+    /**
+     * Metodo que nos dice si hay un elemento siguiente.
+     */
     @Override
     public boolean hasNext() {
         return posicion < array.length && array[posicion] != null;
     }
-
+    /**
+     * Metodo que mueve el iterador al siguiente elemento.
+     */
     @Override
     public Platillo next() {
         Platillo objeto = array[posicion];

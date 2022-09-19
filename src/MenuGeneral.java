@@ -23,7 +23,6 @@ public class MenuGeneral {
 
     /**
      * Regresa un iterador sobre los platillos de este menu.
-     * 
      * @return Un iterador para recorrer los platillos de este menu.
      */
     public Iterator<Platillo> obtenerIterador() {

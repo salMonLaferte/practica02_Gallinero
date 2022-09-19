@@ -15,7 +15,6 @@ public class MenuDiario {
      * Genera un menu diario vacio, o bien uno predeterminado con las hamburguesas:
      * aguacate, espinaca
      * y sin pan.
-     * 
      * @param crearloVacio Si es true, el menu generado estara vacio; si es false el
      *                     menu generado sera
      *                     el predeterminado.
@@ -35,7 +34,6 @@ public class MenuDiario {
     /**
      * Agrega un platillo al menu, siempre y cuando no se encuentre dentro del menu
      * otro platillo con el mismo id.
-     * 
      * @param platillo Platillo para agregar.
      */
     public void agregarPlatillo(Platillo platillo) {
@@ -48,7 +46,6 @@ public class MenuDiario {
 
     /**
      * Regresa un iterador sobre los platillos de este menu.
-     * 
      * @return Un iterador para recorrer los platillos de este menu.
      */
     public Iterator<Platillo> obtenerIterador() {

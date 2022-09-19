@@ -1,6 +1,9 @@
 
 public class HamburguesaZorza extends Hamburguesa {
-
+    /**
+     * Metodo constructor de la clase HamburguesaZorza
+     * (proporciona la descripcion especifica de está hamburguesa).
+     */
     public HamburguesaZorza() {
         id = 9;
         nombre = "Hamburguesa de Zorza";
@@ -11,7 +14,10 @@ public class HamburguesaZorza extends Hamburguesa {
         conQueso = true;
         esVegetariana = false;
     }
-
+    /**
+     * Metodo que permite el cambio de como preparar la carne
+     * de cada hamburguesa.
+     */
     @Override
     protected void prepararCarne() {
         System.out.println("Wosh wosh la carne de lomo esta bien adobada y deliciosa");
