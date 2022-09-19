@@ -3,13 +3,14 @@
  * Clase que implementa el estado de cocinando
  */
 public class CocinandoEstado implements Estado {
-
+    /**
+     * Robot que sera el sujeto de nuestro Estado
+     */
     Robot robot;
 
     /**
-     * Constructor que inicializa al robot
-     * 
-     * @param robot
+     * Constructor de la clase CocinandoEstado que inicializa al robot
+     * @param robot que realiza la acción
      */
     CocinandoEstado(Robot robot) {
         this.robot = robot;
@@ -43,8 +44,7 @@ public class CocinandoEstado implements Estado {
 
     /**
      * Metodo que hace que el robot cocine
-     * 
-     * @param un  menu completo
+     * @param menu un menu completo
      * @param int del id
      */
     @Override

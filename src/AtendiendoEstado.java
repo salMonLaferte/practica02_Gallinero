@@ -3,9 +3,15 @@
  * Clase que implementa el estado de atendiendo
  */
 public class AtendiendoEstado implements Estado {
-
+    /**
+     * Robot que sera el sujeto de nuestro Estado
+     */
     Robot robot;
 
+    /**
+     * Constructor de la clase AtendiendoEstado que inicializa al robot
+     * @param robot que realiza la acción
+     */
     AtendiendoEstado(Robot robot) {
         this.robot = robot;
     }
@@ -29,8 +35,7 @@ public class AtendiendoEstado implements Estado {
 
     /**
      * Metodo que le lee el menu al cliente
-     * 
-     * @param un menu completo
+     * @param menu un menu completo
      */
     @Override
     public void leerMenu(MenuCompleto menu) {
@@ -38,8 +43,7 @@ public class AtendiendoEstado implements Estado {
     }
 
     /**
-     * Metodo que toma la orden del cliente y lo cambia al estado de cocinando
-     * 
+     * Metodo que toma la orden del cliente y lo cambia al estado de cocinando. 
      * @param un  menu completo
      * @param int con el id del platillo
      */

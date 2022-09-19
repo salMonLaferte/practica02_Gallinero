@@ -2,19 +2,21 @@
  * Clase que implementa el estado de caminando
  */
 public class CaminandoEstado implements Estado {
+    /**
+     * Robot que sera el sujeto de nuestro Estado
+     */
     Robot robot;
 
     /**
-     * Constructor que inicializa al robot
-     * 
-     * @param robot
+     * Constructor de la clase CaminandoEstado que inicializa al robot
+     * @param robot que realiza la acción
      */
     CaminandoEstado(Robot robot) {
         this.robot = robot;
     }
 
     /**
-     * Metodo que suspende al robot, lo cambia de estado
+     * Metodo que suspende al robot, lo cambia de estado.
      */
     @Override
     public void suspender() {
@@ -48,7 +50,8 @@ public class CaminandoEstado implements Estado {
     }
 
     /**
-     * Accion que cambia el estado del robot, de caminando a atendiendo
+     * Metodo de acción que cambia el estado del robot,
+     * de caminando a atendiendo.
      */
     @Override
     public void caminar() {
