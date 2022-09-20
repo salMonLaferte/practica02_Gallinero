@@ -62,6 +62,8 @@ public class Main {
                 case 7:
                     robot.tomarOrden(menu, id);
                     break;
+                case 8:
+                    break;
                 default:
                     System.out.println("Por favor introduce un numero del 1 al 8.");
                     break;
